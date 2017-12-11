@@ -2,25 +2,34 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  // templateUrl: './app.component.html',
-  template: `
-  <h1> {{ title }} </h1>
-  <div *ngIf="myArr; then trueTmpl; else otherTmpl">I exist</div>
-
-  <ng-template #otherTmpl>No, I do.</ng-template>
-  <ng-template #trueTmpl>Yes Ido!.</ng-template>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  title = 'course';
-  myObject = {
-    gender: 'male',
-    age: 33,
-    location: 'USA'
+  title = 'udemmy course';
+  titleClass = 'red-title';
+  titleClasses = {
+    'red-title': true,
+    'large-title': true
   };
+  titleLabel = 'Some random title!';
+  titleLabels = 'Some random title with classes binding!';
+  titleStyle = 'red';
+  myEvent(event) {
+    if (this.titleClass === 'red-title') {
+      this.titleClass = 'blue-title';
+      this.titleLabel = 'Some random title! blue';
+    } else {
+      this.titleLabel = 'Some random title! red';
+      this.titleClass = 'red-title';
+    }
 
-  myArr = true;
+  }
+
+
 }
+
+
+
 

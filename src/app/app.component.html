@@ -3,6 +3,12 @@
     <h1>
         Welcome to {{ title }}!
     </h1>
+    <h1 [class]="titleClass">{{titleLabel}}</h1>
+    <h1 [style.color]="titleStyle">title style test!</h1>
+
+    <button (click)="myEvent($event)">Super btn</button>
+    <h1 [ngClass]="titleClasses">{{titleLabels}}</h1>
+
     <app-my-new-component></app-my-new-component>
     <app-my-footer></app-my-footer>
 </div>

@@ -2,3 +2,15 @@ h1 {
     color: rgb(7, 85, 187);
     /*First Commit*/
 }
+
+.red-title {
+    color: red;
+}
+
+.blue-title {
+    color: blue;
+}
+
+.large-title {
+    font-size: 4em;
+}
